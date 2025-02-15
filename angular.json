@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "UI": {
+    "foodstall": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
-            "outputPath": "dist/ui",
+            "outputPath": "dist/foodstall",
             "index": "src/index.html",
             "browser": "src/main.ts",
             "polyfills": [
@@ -21,15 +21,24 @@
             ],
             "tsConfig": "tsconfig.app.json",
             "assets": [
+               "src/assets",
+              "src/favicon.ico",
               {
                 "glob": "**/*",
                 "input": "public"
               }
             ],
             "styles": [
-              "src/styles.css"
+              "src/styles.css",
+              "src/assets/css/bootstrap.css",
+              "src/assets/css/font-awesome.min.css",
+              "src/assets/css/style.scss"
             ],
-            "scripts": []
+            "scripts": [
+              "src/assets/js/bootstrap.js",
+              "src/assets/js/custom.js",
+              "src/assets/js/jquery-3.4.1.min.js"
+            ]
           },
           "configurations": {
             "production": {
@@ -59,10 +68,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "UI:build:production"
+              "buildTarget": "foodstall:build:production"
             },
             "development": {
-              "buildTarget": "UI:build:development"
+              "buildTarget": "foodstall:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -92,5 +101,8 @@
         }
       }
     }
+  },
+  "cli": {
+    "analytics": false
   }
 }
