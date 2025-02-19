@@ -1,12 +1,95 @@
-  <div class="hero_area">
+ <head>
+  <style>
+    body {
+        margin: 0;
+        overflow: hidden;
+        background-color: black;
+        color: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 200vh;
+        font-size: 34px;
+        white-space: nowrap;
+    }
+    .scroll{
+      height: 100px;
+      background-color:darkolivegreen;
+      color: whitesmoke;
+    }
+    .scrolling-text {
+        position: absolute;
+        width: 100%;
+        font-size: 50px;
+        font-family:"Dancing Script", cursive;
+        text-align: center;
+        animation: scroll 30s linear infinite;
+    }
+    @keyframes scroll {
+        from {
+            transform: translateX(100%);
+        }
+        to {
+            transform: translateX(-100%);
+        }
+    }
+    .text-container {
+    text-align: center;
+    }
+
+    .animate-text {
+      opacity: 0; /* Make the text initially invisible */
+      transform: translateY(30px); /* Position it 30px below the normal position */
+      animation: slideUp 5s ease-out forwards; /* Apply the animation */
+    }
+
+    @keyframes slideUp {
+      0% {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    .header-color{
+      background-color: black;
+      position:fixed;
+      top: 10px;
+      z-index: 1;
+      margin-left: -280px;
+      width: 1680px;
+      height: 70px;
+      border: 2px solid black;
+    }
+    .mar{
+      margin-left: 80px;
+      margin-right: -100px;
+    }
+    .mar2{
+      margin-left: 40px;
+      font-size: larger;
+    }
+    .text{
+      text-align: left;
+    }
+    .img1{
+      position: fixed;
+      z-index: 0;
+    }
+</style>
+ </head>
+ <div class="hero_area">
     <div class="bg-box">
       <img src="assets/images/samosa10.jpg" alt="">
     </div>
     <!-- header section strats -->
     <header class="header_section">
       <div class="container">
+        <div class="header-color">
         <nav class="navbar navbar-expand-lg custom_nav-container ">
-          <a class="navbar-brand" href="index.html">
+          <a class="navbar-brand mar" href="index.html">
             <span>
               TFP
             </span>
@@ -17,18 +100,18 @@
           </button>
 
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav  mx-auto ">
+            <ul class="navbar-nav  mx-auto mar2">
               <li class="nav-item active">
-                <a class="nav-link" [routerLink]="['/layout/home']">Home <span class="sr-only">(current)</span></a>
+                <a class="nav-link" [routerLink]="['/home']">Home <span class="sr-only">(current)</span></a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" [routerLink]="['/layout/menu']">Menu</a>
+                <a class="nav-link" [routerLink]="['/menu']">Menu</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" [routerLink]="['/layout/aboutus']">About Us</a>
+                <a class="nav-link" [routerLink]="['/aboutus']">About Us</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" [routerLink]="['/layout/order']">Book Table</a>
+                <a class="nav-link" [routerLink]="['/order']">Order</a>
               </li>
             </ul>
             <div class="user_option">
@@ -93,16 +176,14 @@
                 <button class="btn  my-2 my-sm-0 nav_search-btn" type="submit">
                   <i class="fa fa-search" aria-hidden="true"></i>
                 </button>
-              </form>
-              <a href="" class="order_online">
+              </form>  
+              <a href="" class="order_online mar2">
                 Order Online
               </a>
             </div>
           </div>
         </nav>
-        <div>
-          <router-outlet></router-outlet>
-        </div>
+      </div>
         
       </div>
     </header>
@@ -116,12 +197,13 @@
               <div class="row">
                 <div class="col-md-7 col-lg-6 ">
                   <div class="detail-box">
-                    <h1>
-                      The Foodie Paradise
-                    </h1>
-                    <p>
-                      Doloremque, itaque aperiam facilis rerum, commodi, temporibus sapiente ad mollitia laborum quam quisquam esse error unde. Tempora ex doloremque, labore, sunt repellat dolore, iste magni quos nihil ducimus libero ipsam.
-                    </p>
+                    <div class="text-container">
+                      <h1 class="animate-text">The Foodie Paradise</h1>
+                      <p class="animate-text text">
+                        Our innovative food website give natural atmosphere and online platform to scaning QR-code for getting healthy food.
+                      </p>
+                    </div>
+                    
                     <div class="btn-box">
                       <a href="" class="btn1 btn-secondary">
                         Order Now
@@ -137,12 +219,12 @@
               <div class="row">
                 <div class="col-md-7 col-lg-6 ">
                   <div class="detail-box">
-                    <h1>
-                      THE FOODIE PARADISE
-                    </h1>
-                    <p>
-                      Doloremque, itaque aperiam facilis rerum, commodi, temporibus sapiente ad mollitia laborum quam quisquam esse error unde. Tempora ex doloremque, labore, sunt repellat dolore, iste magni quos nihil ducimus libero ipsam.
-                    </p>
+                    <div class="text-container">
+                      <h1 class="animate-text">The Foodie Paradise</h1>
+                      <p class="animate-text text">
+                        Our innovative food website give natural atmosphere and online platform to scaning QR-code for getting healthy food.
+                      </p>
+                    </div>
                     <div class="btn-box">
                       <a href="" class="btn1">
                         Order Now
@@ -158,12 +240,12 @@
               <div class="row">
                 <div class="col-md-7 col-lg-6 ">
                   <div class="detail-box">
-                    <h1>
-                      THE FOODIE PARADISE
-                    </h1>
-                    <p>
-                      Doloremque, itaque aperiam facilis rerum, commodi, temporibus sapiente ad mollitia laborum quam quisquam esse error unde. Tempora ex doloremque, labore, sunt repellat dolore, iste magni quos nihil ducimus libero ipsam.
-                    </p>
+                    <div class="text-container">
+                      <h1 class="animate-text">The Foodie Paradise</h1>
+                      <p class="animate-text text">
+                        Our innovative food website give natural atmosphere and online platform to scaning QR-code for getting healthy food.
+                      </p>
+                    </div>
                     <div class="btn-box">
                       <a href="" class="btn1">
                         Order Now
@@ -187,6 +269,9 @@
     </section>
     <!-- end slider section -->
   </div>
+  <div class="scroll">
+  <div class="scrolling-text">We can enjoy our food with full family at garden in natural atmosphere...</div>
+</div>
 
   <!-- offer section -->
 
@@ -351,10 +436,6 @@
 
       <ul class="filters_menu">
         <li class="active" data-filter="*">All</li>
-        <li data-filter=".burger">Burger</li>
-        <li data-filter=".pizza">Pizza</li>
-        <li data-filter=".pasta">Pasta</li>
-        <li data-filter=".fries">Fries</li>
       </ul>
 
       <div class="filters-content">
@@ -374,7 +455,7 @@
                   </p>
                   <div class="options">
                     <h6>
-                      $20
+                      Rs.80
                     </h6>
                     <a href="">
                       <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 456.029 456.029" style="enable-background:new 0 0 456.029 456.029;" xml:space="preserve">
@@ -450,7 +531,7 @@
                   </p>
                   <div class="options">
                     <h6>
-                      $15
+                      Rs.20
                     </h6>
                     <a href="">
                       <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 456.029 456.029" style="enable-background:new 0 0 456.029 456.029;" xml:space="preserve">
@@ -526,7 +607,7 @@
                   </p>
                   <div class="options">
                     <h6>
-                      $17
+                      Rs.70
                     </h6>
                     <a href="">
                       <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 456.029 456.029" style="enable-background:new 0 0 456.029 456.029;" xml:space="preserve">
@@ -602,7 +683,7 @@
                   </p>
                   <div class="options">
                     <h6>
-                      $18
+                      Rs.25
                     </h6>
                     <a href="">
                       <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 456.029 456.029" style="enable-background:new 0 0 456.029 456.029;" xml:space="preserve">
@@ -679,7 +760,7 @@
                   </p>
                   <div class="options">
                     <h6>
-                      $10
+                      Rs.20
                     </h6>
                     <a href="">
                       <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 456.029 456.029" style="enable-background:new 0 0 456.029 456.029;" xml:space="preserve">
@@ -755,7 +836,7 @@
                   </p>
                   <div class="options">
                     <h6>
-                      $15
+                      Rs.70
                     </h6>
                     <a href="">
                       <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 456.029 456.029" style="enable-background:new 0 0 456.029 456.029;" xml:space="preserve">
@@ -831,7 +912,7 @@
                   </p>
                   <div class="options">
                     <h6>
-                      $12
+                      Rs.40
                     </h6>
                     <a href="">
                       <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 456.029 456.029" style="enable-background:new 0 0 456.029 456.029;" xml:space="preserve">
@@ -907,7 +988,7 @@
                   </p>
                   <div class="options">
                     <h6>
-                      $14
+                      Rs.30
                     </h6>
                     <a href="">
                       <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 456.029 456.029" style="enable-background:new 0 0 456.029 456.029;" xml:space="preserve">
@@ -983,7 +1064,7 @@
                   </p>
                   <div class="options">
                     <h6>
-                      $10
+                      Rs.20
                     </h6>
                     <a href="">
                       <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 456.029 456.029" style="enable-background:new 0 0 456.029 456.029;" xml:space="preserve">
@@ -1063,22 +1144,19 @@
 
       <div class="row">
         <div class="col-md-6 ">
-          <div class="img-box">
-            <img src="assets/images/about-img.png" alt="">
+          <div class="img-box img1">
+            <img src="assets/images/food.png" alt="">
           </div>
         </div>
         <div class="col-md-6">
           <div class="detail-box">
             <div class="heading_container">
               <h2>
-                We Are Feane
+                The Foodie Paradise
               </h2>
             </div>
             <p>
-              There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration
-              in some form, by injected humour, or randomised words which don't look even slightly believable. If you
-              are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in
-              the middle of text. All
+              Our online platform is providing food by online ordering system.  
             </p>
             <a href="">
               Read More
@@ -1225,13 +1303,13 @@
               <a href="">
                 <i class="fa fa-phone" aria-hidden="true"></i>
                 <span>
-                  Call +01 1234567890
+                  Call +91 9313642290
                 </span>
               </a>
               <a href="">
                 <i class="fa fa-envelope" aria-hidden="true"></i>
                 <span>
-                  demo&#64;gmail.com
+                  netrapatel4040&#64;gmail.com
                 </span>
               </a>
             </div>
@@ -1240,10 +1318,10 @@
         <div class="col-md-4 footer-col">
           <div class="footer_detail">
             <a href="" class="footer-logo">
-              Feane
+              The Foodie Paradise
             </a>
             <p>
-              Necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with
+              It is very easiest way of getting food with enjoy. It is online platform for ordering healthy and tasty food. 
             </p>
             <div class="footer_social">
               <a href="">
@@ -1272,21 +1350,19 @@
             Everyday
           </p>
           <p>
-            10.00 Am -10.00 Pm
+            4.00 Am - 8.00 Pm
           </p>
         </div>
       </div>
       <div class="footer-info">
-        <p>
-          &copy; <span id="displayYear"></span> All Rights Reserved By
-          <a href="https://html.design/">Free Html Templates</a><br><br>
-          &copy; <span id="displayYear"></span> Distributed By
-          <a href="https://themewagon.com/" target="_blank">ThemeWagon</a>
-        </p>
+        <!-- <p>
+          &copy; <span id="displayYear"></span>Reserved by </a><br><br>
+          &copy; <span id="displayYear"></span> Distributed By</a>
+        </p> -->
       </div>
     </div>
   </footer>
-  <!-- footer section -->
+  <!-- footer section -->n
 
   <!-- jQery -->
   <script src="js/jquery-3.4.1.min.js"></script>

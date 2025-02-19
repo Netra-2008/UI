@@ -161,13 +161,15 @@ a:focus {
 
 .header_section {
   padding: 15px 0;
-
+ background-color: #0c0c0c;
   .container-fluid {
     padding-right: 25px;
     padding-left: 25px;
   }
 }
-
+.img1{
+  border-radius: 25%;
+}
 .navbar-brand {
   @include second-font();
 

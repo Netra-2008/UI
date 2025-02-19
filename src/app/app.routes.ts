@@ -4,6 +4,7 @@ import { HomeComponent } from './layout/home/home.component';
 import { MenuComponent } from './layout/menu/menu.component';
 import { OrderComponent } from './layout/order/order.component';
 import { LoginComponent } from './layout/login/login.component';
+import { LayoutComponent } from './layout/layout.component';
 
 export const routes: Routes = [
 
@@ -17,23 +18,17 @@ export const routes: Routes = [
         component:HomeComponent
     },
     {
-        path:'',
-        component:HomeComponent,
-        children:[
-            {
-                path:'menu',
-                component:MenuComponent
-            },
-            {
-                path:'aboutus',
-                component:AboutusComponent
-            },
-            {
-                path:'order',
-                component:OrderComponent
-            }
-        ]
+        path:'aboutus',
+        component:AboutusComponent
+    },
+    {
+        path:'menu',
+        component:MenuComponent
+    },
+    {
+        path:'order',
+        component:OrderComponent
     }
+    
    
-
 ];

@@ -1,17 +1,33 @@
-<p>aboutus works!</p>
-
-
-   <div class="hero_area">
-    <div class="bg-box">
-      <img src="assets/images/hero-bg.jpg" alt="">
-    </div>
-   <!-- header section strats  -->
+<head>
+  <style>
+    .header-color{
+      background-color: black;
+      position:fixed;
+      top: 10px;
+      z-index: 1;
+      margin-left: -280px;
+      width: 1680px;
+      height: 70px;
+      border: 2px solid black;
+    }
+    .mar{
+      margin-left: 80px;
+      margin-right: -100px;
+    }
+    .mar2{
+      margin-left: 40px;
+      font-size: larger;
+    }
+  </style>
+</head>
+<!-- header section strats  -->
     <header class="header_section">
       <div class="container">
+        <div class="header-color">
         <nav class="navbar navbar-expand-lg custom_nav-container ">
-          <a class="navbar-brand" href="index.html">
+          <a class="navbar-brand mar2" href="index.html">
             <span>
-              Feane
+             TFP
             </span>
           </a>
 
@@ -20,18 +36,18 @@
           </button>
 
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav  mx-auto ">
+            <ul class="navbar-nav  mx-auto mar2">
               <li class="nav-item ">
-                <a class="nav-link" routerLink="home">Home </a>
+                <a class="nav-link" [routerLink]="['/home']">Home </a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" routerLink="menu">Menu</a>
+                <a class="nav-link" [routerLink]="['/menu']">Menu</a>
               </li>
               <li class="nav-item active">
-                <a class="nav-link" routerLink="aboutus">About <span class="sr-only">(current)</span> </a>
+                <a class="nav-link" [routerLink]="['/aboutus']">About Us<span class="sr-only">(current)</span> </a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" routerLink="order">Book Table</a>
+                <a class="nav-link" [routerLink]="['/order']">Order</a>
               </li>
             </ul>
             <div class="user_option">
@@ -97,16 +113,16 @@
                   <i class="fa fa-search" aria-hidden="true"></i>
                 </button>
               </form>
-              <a href="" class="order_online">
+              <a href="" class="order_online mar2">
                 Order Online
               </a>
             </div>
           </div>
         </nav>
       </div>
-    </header>
-      end header section 
-  </div>
+      </div>
+    </header> 
+
 
   <!-- about section -->
 
@@ -116,21 +132,18 @@
       <div class="row">
         <div class="col-md-6 ">
           <div class="img-box">
-            <img src="assets/images/about-img.png" alt="">
+            <img src="assets/images/food.png" alt="">
           </div>
         </div>
         <div class="col-md-6">
           <div class="detail-box">
             <div class="heading_container">
               <h2>
-                We Are Feane
+                The Foodie Paradise
               </h2>
             </div>
             <p>
-              There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration
-              in some form, by injected humour, or randomised words which don't look even slightly believable. If you
-              are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in
-              the middle of text. All
+              Our online platform is providing food by online ordering system.
             </p>
             <a href="">
               Read More
@@ -141,9 +154,10 @@
     </div>
   </section>
 
+  
   <!-- end about section -->
 
-  <!-- footer section--> 
+  <!-- footer section -->
   <footer class="footer_section">
     <div class="container">
       <div class="row">
@@ -162,13 +176,13 @@
               <a href="">
                 <i class="fa fa-phone" aria-hidden="true"></i>
                 <span>
-                  Call +01 1234567890
+                  Call +91 9313642290
                 </span>
               </a>
               <a href="">
                 <i class="fa fa-envelope" aria-hidden="true"></i>
                 <span>
-                  demo&#64;gmail.com
+                  netrapatel4040&#64;gmail.com
                 </span>
               </a>
             </div>
@@ -177,10 +191,10 @@
         <div class="col-md-4 footer-col">
           <div class="footer_detail">
             <a href="" class="footer-logo">
-              Feane
+              The Foodie Paradise
             </a>
             <p>
-              Necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with
+              It is very easiest way of getting food with enjoy. It is online platform for ordering healthy and tasty food. 
             </p>
             <div class="footer_social">
               <a href="">
@@ -209,21 +223,19 @@
             Everyday
           </p>
           <p>
-            10.00 Am -10.00 Pm
+            4.00 Am - 8.00 Pm
           </p>
         </div>
       </div>
       <div class="footer-info">
-        <p>
-          &copy; <span id="displayYear"></span> All Rights Reserved By
-          <a href="https://html.design/">Free Html Templates</a><br><br>
-          &copy; <span id="displayYear"></span> Distributed By
-          <a href="https://themewagon.com/" target="_blank">ThemeWagon</a>
-        </p>
+        <!-- <p>
+          &copy; <span id="displayYear"></span>Reserved by </a><br><br>
+          &copy; <span id="displayYear"></span> Distributed By</a>
+        </p> -->
       </div>
     </div>
   </footer>
-  <!--footer section -->
+  <!-- footer section -->
 
   <!-- jQery -->
   <script src="js/jquery-3.4.1.min.js"></script>

@@ -4,11 +4,9 @@ import { AboutusComponent } from '../aboutus/aboutus.component';
 
 @Component({
   selector: 'app-home',
-  imports: [RouterOutlet,RouterLink],
+  imports: [RouterLink,RouterOutlet],
   templateUrl: './home.component.html',
   styleUrl: './home.component.css'
 })
 export class HomeComponent {
-
-  
 }

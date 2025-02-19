@@ -21,12 +21,13 @@ export class LoginComponent {
   http = inject(HttpClient);
 
   onLogin(){
+    debugger;
     this.http.post("https://projectapi.gerasim.in/api/UserApp/login",this.userObj).subscribe((res:any)=>{
       if(res.result){
         alert("Login Success");
         localStorage.setItem('loginuser',JSON.stringify(res.data));
         
-        this.router.navigateByUrl('aboutus');
+        this.router.navigateByUrl('home');
       } else{
          alert(res.message);
         }
